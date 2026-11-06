@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emberfall Tactics — a Dofus-like prototype</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b1220'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23e8c37a'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game"></canvas>
+
+      <div id="hud">
+        <header class="topbar">
+          <div class="brand">
+            <span class="brand-rune">✦</span>
+            <div>
+              <h1>Emberfall Tactics</h1>
+              <p>tactical skirmish</p>
+            </div>
+          </div>
+
+          <div class="round-badge">Round <strong id="round">1</strong></div>
+
+          <div class="turn-order" id="turn-order"></div>
+
+          <div class="objective">
+            <span class="dot"></span>
+            Defeat all enemies
+          </div>
+        </header>
+
+        <aside class="side-panel" id="side-panel"></aside>
+
+        <footer class="action-bar">
+          <div class="hint" id="hint"></div>
+          <div class="bar-row">
+            <div class="spells" id="spells"></div>
+            <button id="end-turn" class="btn-primary" type="button">
+              End Turn <span class="key">↵</span>
+            </button>
+          </div>
+        </footer>
+      </div>
+
+      <div id="toast" class="toast"></div>
+
+      <div id="banner" class="banner hidden">
+        <div class="banner-card">
+          <p class="eyebrow" id="banner-eyebrow">Battle Complete</p>
+          <h2 id="banner-title">Victory</h2>
+          <p id="banner-text"></p>
+          <button id="restart" class="btn-primary" type="button">Fight Again</button>
+        </div>
+      </div>
+
+      <div id="tooltip" class="tooltip hidden"></div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
